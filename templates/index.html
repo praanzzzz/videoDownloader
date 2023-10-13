@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Converter</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+
+ 
+ 
+ <style>
+
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #060606;
+ 
+  }
+
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #f7f6f6;
+    text-shadow: 6px 6px 3px #060606;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+
+  .jumbotron {
+    /* background-image: url(https://i.pinimg.com/750x/79/c8/46/79c84683ce69272615881cb66effeae3.jpg); */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 150%;
+    margin:auto;
+    background-color: rgb(15, 28, 103);
+    color: rgb(243, 239, 244);
+    text-shadow: 6px 6px 3px #060606;
+    padding: 250px 30px;
+    font-family: Montserrat, sans-serif;
+    
+    
+  }
+
+  .input-group {
+    width: 950px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+
+  </style>
+
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+      
+      <div class="jumbotron text-center">
+        <h1>VIDEO &nbsp;DOWNLOADER</h1>
+        &nbsp; 
+        <h2> Hassle free download.&nbsp; Enjoy all you want!<h2> 
+          &nbsp;  
+          
+        <form id="search" action="downloadmp4" method="POST">
+            {% csrf_token %}
+            <div class="input-group">
+              <input type="addressmp4" name="addressmp4" class="form-control" size="50" style="opacity:60%; box-shadow:5px 5px 10px #0000;" placeholder="Paste the URL here to start downloading..." required>
+              <div class="input-group-btn">
+                <button type="submit" class="btn btn-danger" style="background-color:#ca5309; opacity:90%;">Download</button>
+              </div>
+            </div>
+            
+        </form>
+      </div>
+ 
+</body>
+</html>
